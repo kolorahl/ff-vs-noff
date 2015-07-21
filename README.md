@@ -1,3 +1,3 @@
 # test
 
-Testing some git merging and rebasing stuff.
+Testing some git merging and rebasing stuff. This is fun!
