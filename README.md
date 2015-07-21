@@ -18,6 +18,30 @@ You may omit the `--oneline` option for slightly more verbosity. If you have a f
 
 Non-fast-forward merges were made using `git merge --no-ff` and fast-forward merges were made using `git merge --ff`.
 
+# The graph
+
+For those too lazy, here is what the final history should look like, with some edits to make the commit intentions more obvious.
+
+    * 4616328 Final touches
+    * d575188 Merge with ff again - no conflicts
+    *   048a38b Merge commit for --ff with conflicts
+    |\  
+    | * bcfafbe This branch has a conflict with master
+    * | c7d2cb5 Some change made to master intended to cause conflict
+    |/  
+    * 6b23bfe Merged with --ff and no conflicts; looks like a direct commit
+    *   9a0aab8 Merge commit generated due to --no-ff; no conflicts
+    |\  
+    | * 1db7988 Another commit with no conflicts
+    |/  
+    *   ecf0f16 Merge commit generated due to --no-ff; no conflicts
+    |\  
+    | * cdd220f A branch that contains no conflicting merges
+    |/  
+    * 07995d3 Second direct commit
+    * d9b78ee Direct commit - no merging, just commit and push
+    * 2c00621 Initial commit
+
 # GitHub and merges
 
 Unfortunately GitHub forces users to have non-fast-forward merges when using their Pull Request system. For this reason I suggest that projects wishing to have a simpler and cleaner commit history use local git commands to perform the merge and then use GitHub only to pull and push changes.
